@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        
+        <title> Profile </title>
+        
+        <style>
+            
+            body{
+                background-color: #ccffff;
+                background-image: url("pic.jpg");
+                text-align: center;
+                background-size:100%;
+                margin-top:0px;
+                }
+                
+                .l1{
+                     position: fixed;
+                right: 600px;
+                top: 100px;
+                color:white;
+                font-style:italic;
+                font-size:1.5rem;
+                }
+                .l2{
+                     position: fixed;
+                right: 600px;
+                top: 150px;
+                color:white;
+                font-style:italic;
+                font-size: 1.5rem;
+                }
+                
+                 .l3{
+                     position: fixed;
+                right: 600px;
+                top: 200px;
+                color:white;
+                font-style:italic;
+                font-size: 1.5rem;
+                }
+                .txt{
+                    position: fixed;
+                    right: 400px;
+                    top: 100px;
+                    color: black;
+                    font-style: italic;
+                    font-size: 1rem
+                }
+                 .txt1{
+                    position: fixed;
+                    right: 400px;
+                    top: 150px;
+                    color: black;
+                    font-style: italic;
+                    font-size: 1rem
+                }
+                .txt2{
+                    position: fixed;
+                    right: 400px;
+                    top: 200px;
+                    color: black;
+                    font-style: italic;
+                    font-size: 1rem
+                }
+                .btnlo{
+                     position: fixed;
+                right:500px;
+                top: 300px;
+                color:#b07100;
+                font-style:oblique;
+                font-size: 1rem;
+                }
+                .db{
+                    position: fixed;
+                right:570px;
+                top: 300px;
+                color:#b07100;
+                font-style:oblique;
+                font-size: 1rem;
+                }
+                
+        </style>
+    </h:head>
+    <h:body>
+          <h:form>
+            <label class="l1">Username</label> 
+            <label class="l2">Phone Number</label> 
+            <label class="l3">Email Address</label>   
+              
+            <h:inputText class="txt" value="#(insert1.username) "></h:inputText>
+            <h:inputText class="txt1" value="#(insert1.phone) "></h:inputText>
+              <h:inputText class="txt2" value="#(insert1.address) "></h:inputText>
+              <h:commandButton value="Submit" class="db" action="#(insert1.log)"/>
+            <h:commandButton value="Next" class="btnlo" action="next"/>
+            
+            
+            </h:form> 
+    </h:body>
+</html>
