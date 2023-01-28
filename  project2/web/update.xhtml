@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title> Update</title>
+        <style>
+         
+                body{
+                background-color: #ccffff;
+                background-image: url("pic.jpg");
+                text-align: center;
+                background-size:100%;
+                margin-top:0px;
+                } 
+                
+                .lab{
+                    
+                }
+             
+            form{
+                background-color:#cc995b;
+          border-radius: 40px;
+                margin-left: 400px;
+                margin-top: 50px;
+                height: 600px;
+                width: 500px;
+            opacity: 0.7px;
+            
+                
+            }
+            .text1{
+                font-family: Arial;
+                   font-size: 20px;
+                  font-weight: bold;
+                 color: cyan;
+                margin:40px;
+            }
+           form .stm{
+             opacity: 0.7px;
+             transition: 0.4s;
+                width: 250px;
+                height:30px;
+                position: fixed;
+                left: 550px;
+                border-radius: 25px;
+                background-color:honeydew;
+                border: 2px solid transparent;
+            }
+            .btn{
+                position: fixed;
+                right: 190px;
+                top: 450px;
+                color: #b07100;
+                font-style: italic;
+                font-size: 1rem;
+            }
+            .cancel{
+                  position: fixed;
+                right: 190px;
+                top: 450px;
+                color: #b07100;
+                font-style: italic;
+                font-size: 1rem;
+            }
+              form{
+                  background-color: #cc995b;
+                  opacity: 0.8;
+          border-radius: 40px;
+                margin-left: 400px;
+                margin-top: 50px;
+                height: 600px;
+                width: 500px;
+            opacity: 0.7px;
+            
+                
+            }
+            .spm{
+                width: 100px;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+              <div class="text1">   
+                 <h3> Update Information By Entering Starting point </h3>
+            
+            </div>
+       
+           <div class="text1">   
+            <label class="lab">Train Number</label>
+          <h:selectOneMenu value="#{update1.trainN}" class="spm">
+                <f:selectItems value="#{update1.trNo}"/>
+            </h:selectOneMenu>
+             
+            </div>
+           
+           <div class="text1">   
+            <label class="lab">Destination</label>
+            <h:selectOneMenu value="#{update1.destinatio}" class="spm">
+                <f:selectItems value="#{update1.des}"/>  
+                 
+             </h:selectOneMenu>
+            </div>
+           <div class="text1">   
+            <label class="lab">Date</label>
+            
+            <h:selectOneMenu value="#{update1.dat}" class="spm">
+                <f:selectItems value="#{update1.da}"/>  
+                 
+             </h:selectOneMenu>
+            </div>
+           <div class="text1">   
+            <label class="lab">Departure</label>
+            <h:selectOneMenu value="#{update1.departur}" class="spm">
+                <f:selectItems value="#{update1.dep}"/>  
+                 
+             </h:selectOneMenu>
+            </div>
+             
+             <div class="text1">   
+            <label class="lab">Starting Point</label>
+              <h:selectOneMenu value="#{update1.startingpoin}" class="spm">
+                <f:selectItems value="#{update1.stp}"/>  
+                 
+             </h:selectOneMenu>
+            </div>
+            
+         <div class="Button">
+             
+             <h:commandButton class="btn" value="SAVE" action="#{update1.lug}"/> 
+<!--             <h:commandButton  value="CANCEL" class="cancel"/> <br/>-->
+            </div> 
+            
+            
+            
+            
+            
+            
+        </h:form>
+    </h:body>
+</html>

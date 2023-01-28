@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        
+        <title>Information </title>
+        
+        <style>
+            
+             body{
+                background-color: #ccffff;
+                background-image: url("pic.jpg");
+                text-align: center;
+                background-size:100%;
+                margin-top:0px;
+                }
+                
+                .l1c{
+                     position: fixed;
+                right: 800px;
+                top: 60px;
+                font-weight: bold;
+                text-decoration: underline;
+                color:white;
+                font-style:italic;
+                font-size:1.8rem;
+                } 
+                
+                .l2cl{
+                    position: fixed;
+                right: 600px;
+                top: 100px;
+                
+                color:white;
+                font-style:italic;
+                font-size:1.6rem; 
+                }
+                
+                .l3tt{
+                    position: fixed;
+                right: 800px;
+                top: 250px;
+                
+                color:white;
+                font-style:italic;
+                font-size:1.6rem; 
+                }
+                 
+                .l4ad{
+                    position: fixed;
+                right: 800px;
+                top: 400px;
+                
+                color:white;
+                font-style:italic;
+                font-size:1.6rem; 
+                }
+                
+                
+                .l5t{
+                    position: fixed;
+                right: 800px;
+                top: 200px;
+                font-weight: bold;
+                text-decoration: underline;
+                color:white;
+                font-style:italic;
+                font-size:1.8rem;
+                }
+               
+                .l8a{
+                      position: fixed;
+                right: 870px;
+                top: 350px;
+                font-weight: bold;
+                text-decoration: underline;
+                color:white;
+                font-style:italic;
+                font-size:1.8rem;
+                }
+                
+                .l9h{
+                      position: fixed;
+                right: 790px;
+                top: 350px;
+                font-weight: bold;
+                text-decoration: underline;
+                color:white;
+                font-style:italic;
+                font-size:1.8rem;
+                }
+                
+                .btnne{
+                     position: fixed;
+                right:500px;
+                top: 430px;
+                color:#b07100;
+                font-style:oblique;
+                font-size: 1rem;
+                }
+                .bnt{
+                     position: fixed;
+                right:580px;
+                top: 430px;
+                color:#b07100;
+                font-style:oblique;
+                font-size: 1rem;
+                }
+              
+        </style>
+        
+    </h:head>
+    
+    <h:body>
+        
+        <h:form>
+           
+            <label class="l1c">Class and Fee</label> 
+            <h:selectOneRadio value="#{insert.classes}" class="l2cl">
+                <f:selectItems value="#{insert.cla}"/>
+                  
+           </h:selectOneRadio> 
+           
+           <label class="l5t"> Ticket Type</label> 
+           <h:selectOneRadio value="#{insert.type}" class="l3tt">
+               <f:selectItems value="#{insert.typ}"/>
+                 
+            </h:selectOneRadio> 
+            
+             <label class="l8a">Adult</label> 
+             <label class="l9h">Child</label>
+             <h:selectOneRadio value="#{insert.adult}" class="l4ad">
+                  <f:selectItems value="#{insert.adul}"/>
+           </h:selectOneRadio> 
+              
+   
+             <h:commandButton value="Next" class="btnne" action="submit1" actionListener="#{insert.log()}"/>
+        </h:form>
+        
+    </h:body>
+</html>

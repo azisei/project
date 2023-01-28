@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title> Train</title>
+        
+        <style>
+             body{
+                background-color: #ccffff;
+                background-image: url("pic.jpg");
+                text-align: center;
+                background-size:100%;
+                margin-top:0px;
+                }
+                
+                .ti{
+                    position: fixed;
+                    right: 500px;
+                    top: 0px;
+                    font-weight: bold;
+                    text-decoration: underline;
+                    color: white;
+                    font-style: italic;
+                    font-size: 1.9rem;
+                    
+                }
+                .tn{
+                     position: fixed;
+                right: 900px;
+                top: 100px;
+                font-weight: bold;
+                text-decoration: underline;
+                color:white;
+                font-style:italic;
+                font-size:1.7rem;
+                }
+                .tm{
+                     position: fixed;
+                right: 800px;
+                top: 100px;
+                color:black;
+                font-style:italic;
+                font-size:1.2rem; 
+                }
+                
+                .sp{
+                     position: fixed;
+                right: 900px;
+                top: 150px;
+                font-weight: bold;
+                text-decoration: underline;
+                color:white;
+                font-style:italic;
+                font-size:1.7rem;
+                }
+                .spm{
+                     position: fixed;
+                right: 750px;
+                top: 150px;
+                color:black;
+                font-style:italic;
+                font-size:1.2rem;
+                }
+            .ld{
+                      position: fixed;
+                right: 900px;
+                top: 200px;
+                font-weight: bold;
+                text-decoration: underline;
+                color:white;
+                font-style:italic;
+                font-size:1.7rem;
+                }
+                .aa{
+                     position: fixed;
+                right: 750px;
+                top: 200px;
+                color:black;
+                font-style:italic;
+                font-size:1.2rem;
+                }
+                 .dat{
+                 position: fixed;
+                right: 900px;
+                top: 250px;
+                font-weight: bold;
+                text-decoration: underline;
+                color:white;
+                font-style:italic;
+                font-size:1.7rem;   
+                }
+                .dat1{
+                     position: fixed;
+                right: 750px;
+                top: 250px;
+                text-decoration: underline;
+                color:black;
+                font-style:italic;
+                font-size:1.2rem;
+                }
+                .dep{
+                     position: fixed;
+                right: 900px;
+                top: 300px;
+                font-weight: bold;
+                text-decoration: underline;
+                color:white;
+                font-style:italic;
+                font-size:1.7rem;
+                }
+                .txt{
+                     position: fixed;
+                    right: 780px;
+                    top: 300px;
+                    color: black;
+                    font-style: italic;
+                    font-size: 1rem
+                }
+               
+                .fff{
+                   position: fixed;
+                   right: 100px;
+                   top: 400px;
+                   
+                  
+                  font-style: italic;
+                  color: white;
+                  font-size: 1.3rem;
+                }
+                
+                .hlp{
+                position: fixed;
+                right: 190px;
+                top: 450px;
+                color: #b07100;
+                font-style: italic;
+                font-size: 1rem;
+                }
+                .bttn{
+                     position: fixed;
+                right:500px;
+                top: 430px;
+                color:#b07100;
+                font-style:oblique;
+                font-size: 1rem;
+                }
+                
+               
+               
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <label class="ti">Train Details</label>
+            
+            <label class="tn"> Train Number</label>
+            <h:selectOneMenu value="#{insert.trainNo}" class="tm">
+                <f:selectItems value="#{insert.trNo}"/>
+            </h:selectOneMenu>
+            
+            <label class="sp">Starting Point</label>
+            <h:selectOneMenu value="#{insert.startingpoint}" class="spm">
+                <f:selectItems value="#{insert.stp}"/>  
+                 
+             </h:selectOneMenu>
+            
+            <label class="ld"> Destination</label>
+            
+            <h:selectOneMenu value="#{insert.destination}" class="aa" >
+                <f:selectItems value="#{insert.des}"/>  
+              </h:selectOneMenu>
+            
+            <label class="dat">Date</label>
+            <h:selectOneMenu value="#{insert.date}" class="dat1">
+                <f:selectItems value="#{insert.da}"/>
+            </h:selectOneMenu>
+            
+            <label class="dep">Departure</label>
+            <h:selectOneMenu class="txt" value="#{insert.departure}"> 
+                <f:selectItems value="#{insert.dep}"/>
+             </h:selectOneMenu>
+           
+            
+            <label class="fff">Train Special Information</label>
+            
+            <h:commandButton value="Help" class="hlp" action="help"/>
+                   
+            
+            <h:commandButton value="Done" class="bttn" action="done" actionListener="#{insert.lag()}"/>
+        </h:form>
+    </h:body>
+</html>
