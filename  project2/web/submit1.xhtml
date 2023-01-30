@@ -156,29 +156,29 @@
             <label class="ti">Train Details</label>
             
             <label class="tn"> Train Number</label>
-            <h:selectOneMenu value="#{insert.trainNo}" class="tm">
+            <h:selectOneMenu id="train_number" value="#{insert.trainNo}" class="tm">
                 <f:selectItems value="#{insert.trNo}"/>
             </h:selectOneMenu>
             
             <label class="sp">Starting Point</label>
-            <h:selectOneMenu value="#{insert.startingpoint}" class="spm">
+            <h:selectOneMenu id="starting_point" value="#{insert.startingpoint}" class="spm">
                 <f:selectItems value="#{insert.stp}"/>  
                  
              </h:selectOneMenu>
             
             <label class="ld"> Destination</label>
             
-            <h:selectOneMenu value="#{insert.destination}" class="aa" >
+            <h:selectOneMenu id="destination" value="#{insert.destination}" class="aa" >
                 <f:selectItems value="#{insert.des}"/>  
               </h:selectOneMenu>
             
             <label class="dat">Date</label>
-            <h:selectOneMenu value="#{insert.date}" class="dat1">
+            <h:selectOneMenu id="date" value="#{insert.date}" class="dat1">
                 <f:selectItems value="#{insert.da}"/>
             </h:selectOneMenu>
             
             <label class="dep">Departure</label>
-            <h:selectOneMenu class="txt" value="#{insert.departure}"> 
+            <h:selectOneMenu id="departure" class="txt" value="#{insert.departure}"> 
                 <f:selectItems value="#{insert.dep}"/>
              </h:selectOneMenu>
            

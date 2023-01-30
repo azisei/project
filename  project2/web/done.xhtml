@@ -16,38 +16,56 @@
                 margin-top: 0px;
                 
             }
-            td{
-                margin: 20px;
-                background-color: #cc9900;
-            
-            }
-            th{
-                 margin: 20px;
-                background-color: #cea500; 
-            }
+           
             .lab{
+                position: fixed;
+                right: 20px;
+                top: 20px;
+                font-weight: bold;
+                text-decoration: underline;
+                color: whitesmoke;
+                font-style: italic;
+                font-size: 1.8rem
+            }
+            .lab1{
                 position:relative;
-                left: 40px;
-                top: 200px;
+                left: 150px;
+                top: 180px;
                 font-weight: bold;
                 text-decoration: underline;
                 color:whitesmoke ;
                 font-style:italic;
-                font-size: 1.8rem;
+                font-size: 1.8rem; 
             }
             
             .txt{
-                position: fixed;
-                    right: 450px;
-                    top: 250px;
+                    position: fixed;
+                    right: 100px;
+                    top: 80px;
                     color: black;
                     font-style: italic;
                     font-size: 1rem
             }
+             .txt1{
+                    position: fixed;
+                    right: 100px;
+                    top: 250px;
+                    color: black;
+                    font-style: italic;
+                    font-size: 1rem   
+            }
             .sea{
                  position: fixed;
-                right:500px;
-                top: 300px;
+                right:50px;
+                top: 120px;
+                color:#b07100;
+                font-style:oblique;
+                font-size: 1rem;
+            }
+             .fi{
+                position: fixed;
+                right:50px;
+                top: 290px;
                 color:#b07100;
                 font-style:oblique;
                 font-size: 1rem;
@@ -76,61 +94,26 @@
       </h:head>
     <h:body>
         <h:form>
-            <div>
+          
                 
             <label class="lab">To see your Information: Enter Username</label>
-            <label class="la">To Update</label>
+            
+            <label class="lab1">To see your Train Details</label>
+               
+            <label class="la">To Update your Train Details</label>
             
             <h:inputText class="txt" value="#{ret.username1}"> </h:inputText>
-            <h:commandButton value="Search" class="sea" action="#{ret.singlelist}"/>
-            <h:commandButton value="Update" class="up" action="update" actionListener="#{update1.lug()}"/>
-            </div>
             
-            <div>
-            <h:dataTable id ="pData" value="#{ret.singlelist()}" var="dat">
+            <h:commandButton value="Search" class="sea" action="customer" actionListener="#{ret.singlelist}"/>
             
-            <h:column>
-                <f:facet name="header">
-                    USERNAME
-                </f:facet>
-                <h:outputText value="#{dat.username}"/>  
-
-            </h:column>
-             <h:column>
-                <f:facet name="header">
-                     PHONE
-                </f:facet>
-                <h:outputText value="#{dat.phone}"/>  
-            </h:column>
-             <h:column>
-                <f:facet name="header">
-                  ADDRESS
-                </f:facet>
-               <h:outputText value="#{dat.address}"/>  
-            </h:column>
-             <h:column>
-                <f:facet name="header">
-                    CLASS
-                </f:facet>
-               <h:outputText value="#{dat.classes}"/>  
-            </h:column>
-             <h:column>
-                <f:facet name="header">
-                 TYPE
-                </f:facet>
-                <h:outputText value="#{dat.type}"/>  
-            </h:column>
-             <h:column>
-                <f:facet name="header">
-                  ADULT
-                </f:facet>
-                <h:outputText value="#{dat.adult}"/>  
-            </h:column>
-             
+            <h:inputText class="txt1" value="#{tra.train}"></h:inputText>
             
+            <h:commandButton value="Find" class="fi" action="customer" actionListener="#{tra.singlel()}"/>
             
-        </h:dataTable>
-            </div>
+            <h:commandButton value="Update" class="up" action="update" actionListener="#{upd.lug()}"/>
+          
+            
+          
         </h:form>
     </h:body>
 </html>

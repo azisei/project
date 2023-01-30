@@ -7,59 +7,103 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-@ManagedBean
+@ManagedBean(name="upd")
 @SessionScoped
 public class Update1 {
-     private String trainN;//combobox
-    List<String>trNo;
+    
+     private String trainNo;//combobox
+    List<String> trNo;
     private String startingpoin;//combobox
-    List<String>stp;
+    List<String> stp;
     private String destinatio;//combobox
-    List<String>des;
+    List<String> des;
     private String dat;//combobox
-    List<String>da;
+    List<String> da;
     private String departur;//combobox
-    List<String>dep;
+    List<String> dep;
 
-    public String getTrainN() {
-        return trainN;
+    public String getTrainNo() {
+        return trainNo;
+    }
+
+    public void setTrainNo(String trainNo) {
+        this.trainNo = trainNo;
     }
 
     public List<String> getTrNo() {
         return trNo;
     }
 
+    public void setTrNo(List<String> trNo) {
+        this.trNo = trNo;
+    }
+
     public String getStartingpoin() {
         return startingpoin;
+    }
+
+    public void setStartingpoin(String startingpoin) {
+        this.startingpoin = startingpoin;
     }
 
     public List<String> getStp() {
         return stp;
     }
 
+    public void setStp(List<String> stp) {
+        this.stp = stp;
+    }
+
     public String getDestinatio() {
         return destinatio;
+    }
+
+    public void setDestinatio(String destinatio) {
+        this.destinatio = destinatio;
     }
 
     public List<String> getDes() {
         return des;
     }
 
+    public void setDes(List<String> des) {
+        this.des = des;
+    }
+
     public String getDat() {
         return dat;
+    }
+
+    public void setDat(String dat) {
+        this.dat = dat;
     }
 
     public List<String> getDa() {
         return da;
     }
 
+    public void setDa(List<String> da) {
+        this.da = da;
+    }
+
     public String getDepartur() {
         return departur;
+    }
+
+    public void setDepartur(String departur) {
+        this.departur = departur;
     }
 
     public List<String> getDep() {
         return dep;
     }
+
+    public void setDep(List<String> dep) {
+        this.dep = dep;
+    }
+
+     
+ 
     public Update1(){
        
         da=new ArrayList<>();
@@ -100,14 +144,16 @@ public class Update1 {
     
     public void lug(){
     try{
-            dbc ds=new dbc();
-            Connection connection =ds.connMethod();
-            PreparedStatement p = connection.prepareStatement("UPDATE TRAIN SET TRAIN_NUMBER=?,DESTINATION=?,DAY=?,DEPARTURE=? WHERE STARTING_POINT=?");
-            p.setString(1,trainN);
-              p.setString(2,startingpoin);
-            p.setString(3,destinatio);
-            p.setString(4,dat);
-            p.setString(5,departur);
+            dbc d=new dbc();
+            Connection connection =d.connMethod();
+            PreparedStatement p = connection.prepareStatement("UPDATE TRAIN1 SET TRAIN_NUMBER=?,DESTINATION=?,DAY=?,DEPARTURE=? WHERE STARTING_POINT=?");
+            p.setString(1,trainNo);
+            p.setString(2,destinatio);
+            p.setString(3,dat);
+            p.setString(4,departur);
+            p.setString(5,startingpoin);
+             
+            p.executeUpdate();
          
       }
       catch(SQLException e) {

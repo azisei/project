@@ -118,20 +118,20 @@
         <h:form>
            
             <label class="l1c">Class and Fee</label> 
-            <h:selectOneRadio value="#{insert.classes}" class="l2cl">
+            <h:selectOneRadio value="#{insert.classes}" class="l2cl" required="true">
                 <f:selectItems value="#{insert.cla}"/>
                   
            </h:selectOneRadio> 
            
            <label class="l5t"> Ticket Type</label> 
-           <h:selectOneRadio value="#{insert.type}" class="l3tt">
+           <h:selectOneRadio value="#{insert.type}" class="l3tt" required="true">
                <f:selectItems value="#{insert.typ}"/>
                  
             </h:selectOneRadio> 
             
              <label class="l8a">Adult</label> 
              <label class="l9h">Child</label>
-             <h:selectOneRadio value="#{insert.adult}" class="l4ad">
+             <h:selectOneRadio value="#{insert.adult}" class="l4ad" required="true">
                   <f:selectItems value="#{insert.adul}"/>
            </h:selectOneRadio> 
               

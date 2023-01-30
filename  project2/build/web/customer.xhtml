@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>information</title>
+        <style>
+              body{
+                background-color: #ccffff;
+                background-image: url("pic.jpg");
+                text-align: center;
+                background-size: 100%;
+                margin-top: 0px;
+                
+            }
+             td{
+                margin: 20px;
+                background-color: #cc9900;
+            
+            }
+            th{
+                 margin: 20px;
+                background-color: #cea500; 
+            }
+            
+              .table{
+                right: 700px;
+                top: 100px;
+            }
+            .table1{
+              right: 700px;
+                top: 200px;  
+            }
+            .bac{
+                 position: fixed;
+                right: 300px;
+                top: 430px;
+                color:#b07100;
+                font-style:oblique;
+                font-size: 1rem;
+            }
+            
+        </style>
+    </h:head>
+    <h:body>
+        <form>
+              <div>
+                <h:dataTable id ="pData" value="#{ret.singlelist()}" var="dat" class="table">
+            
+            <h:column>
+                <f:facet name="header">
+                    USERNAME
+                </f:facet>
+                <h:outputText value="#{dat.username}"/>  
+
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                     PHONE
+                </f:facet>
+                <h:outputText value="#{dat.phone}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                  ADDRESS
+                </f:facet>
+               <h:outputText value="#{dat.address}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                    CLASS
+                </f:facet>
+               <h:outputText value="#{dat.classes}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                 TYPE
+                </f:facet>
+                <h:outputText value="#{dat.type}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                  ADULT
+                </f:facet>
+                <h:outputText value="#{dat.adult}"/>  
+            </h:column>
+             
+            
+            
+        </h:dataTable>
+            </div>
+            <div>
+                <h:dataTable id ="pDat" value="#{tra.singlel()}" var="tre" class="table1">
+            
+            <h:column>
+                <f:facet name="header">
+                    TRAIN_NUMBER
+                </f:facet>
+                <h:outputText value="#{tre.trainNo}"/>  
+
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                     STARTING_POINT
+                </f:facet>
+                 <h:outputText value="#{tre.startingpoint}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                  DESTINATION
+                </f:facet>
+                 <h:outputText value="#{tre.destination}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                    DAY
+                </f:facet>
+                 <h:outputText value="#{tre.date}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                 DEPARTURE
+                </f:facet>
+                 <h:outputText value="#{tre.departure}"/>  
+            </h:column>
+       
+        </h:dataTable>
+            </div>
+            <h:commandButton value="Back" class="bac" action="done"/>
+        </form>
+    </h:body>
+</html>

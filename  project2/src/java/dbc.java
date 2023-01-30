@@ -17,7 +17,6 @@ import java.sql.SQLException;
               conn = DriverManager.getConnection(URL,USER,PASSWORD);
           }
           catch (ClassNotFoundException | SQLException e){
-               e.printStackTrace();
           }
        return conn;
 }

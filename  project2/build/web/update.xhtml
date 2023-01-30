@@ -3,8 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+   
     <h:head>
-        <title> Update</title>
+        <title>Update</title>
         <style>
          
                 body{
@@ -21,60 +22,67 @@
              
             form{
                 background-color:#cc995b;
-          border-radius: 40px;
-                margin-left: 400px;
+                border-radius: 40px;
+                margin-left: 100px;
                 margin-top: 50px;
-                height: 600px;
-                width: 500px;
-            opacity: 0.7px;
+                height: 400px;
+                width: 400px;
+                opacity: 0.7px;
             
                 
             }
             .text1{
-                font-family: Arial;
-                   font-size: 20px;
+                font-style: italic;
+                   font-size: 19px;
                   font-weight: bold;
-                 color: cyan;
+                 color:white; 
                 margin:40px;
             }
+            
+            .text
+            {
+            font-style: italic;
+            text-decoration: underline;
+                   font-size: 20px;
+                  font-weight: bold;
+                 color:white; 
+                margin:40px;  
+            }
            form .stm{
-             opacity: 0.7px;
+             
              transition: 0.4s;
-                width: 250px;
+                width: 100px;
                 height:30px;
                 position: fixed;
                 left: 550px;
                 border-radius: 25px;
-                background-color:honeydew;
+                background-color:whitesmoke;
                 border: 2px solid transparent;
             }
             .btn{
                 position: fixed;
-                right: 190px;
+                right: 800px;
                 top: 450px;
                 color: #b07100;
                 font-style: italic;
                 font-size: 1rem;
-            }
-            .cancel{
-                  position: fixed;
-                right: 190px;
-                top: 450px;
-                color: #b07100;
-                font-style: italic;
-                font-size: 1rem;
-            }
+            }             
               form{
-                  background-color: #cc995b;
+                  background-color:#996600;
                   opacity: 0.8;
-          border-radius: 40px;
-                margin-left: 400px;
-                margin-top: 50px;
-                height: 600px;
-                width: 500px;
-            opacity: 0.7px;
-            
-                
+                 border-radius: 40px;
+                 margin-left: 50px;
+                 margin-top: 10px;
+                 height: 400px;
+                 width: 400px;
+            }
+            .can{
+               position: fixed;
+                right: 900px;
+                top: 450px;
+                color: #b07100;
+                font-style: italic;
+                font-size: 1rem;  
             }
             .spm{
                 width: 100px;
@@ -83,61 +91,62 @@
     </h:head>
     <h:body>
         <h:form>
-              <div class="text1">   
+              <div class="text">   
                  <h3> Update Information By Entering Starting point </h3>
             
             </div>
        
            <div class="text1">   
             <label class="lab">Train Number</label>
-          <h:selectOneMenu value="#{update1.trainN}" class="spm">
-                <f:selectItems value="#{update1.trNo}"/>
+            <h:selectOneMenu value="#{upd.trainNo}" class="spm">
+                <f:selectItems value="#{upd.trNo}"/>
             </h:selectOneMenu>
-             
+            <br></br>
             </div>
            
            <div class="text1">   
             <label class="lab">Destination</label>
-            <h:selectOneMenu value="#{update1.destinatio}" class="spm">
-                <f:selectItems value="#{update1.des}"/>  
+            <h:selectOneMenu value="#{upd.destinatio}" class="spm">
+                <f:selectItems value="#{upd.des}"/>  
                  
              </h:selectOneMenu>
+            
+             <br></br>
             </div>
            <div class="text1">   
             <label class="lab">Date</label>
             
-            <h:selectOneMenu value="#{update1.dat}" class="spm">
-                <f:selectItems value="#{update1.da}"/>  
+            <h:selectOneMenu value="#{upd.dat}" class="spm">
+                <f:selectItems value="#{upd.da}"/>  
                  
              </h:selectOneMenu>
+             <br></br>
             </div>
            <div class="text1">   
             <label class="lab">Departure</label>
-            <h:selectOneMenu value="#{update1.departur}" class="spm">
-                <f:selectItems value="#{update1.dep}"/>  
+            <h:selectOneMenu value="#{upd.departur}" class="spm">
+                <f:selectItems value="#{upd.dep}"/>  
                  
              </h:selectOneMenu>
+             <br></br>
             </div>
              
              <div class="text1">   
             <label class="lab">Starting Point</label>
-              <h:selectOneMenu value="#{update1.startingpoin}" class="spm">
-                <f:selectItems value="#{update1.stp}"/>  
+              <h:selectOneMenu value="#{upd.startingpoin}" class="spm">
+                <f:selectItems value="#{upd.stp}"/>  
                  
              </h:selectOneMenu>
+            
+             <br></br>
             </div>
             
-         <div class="Button">
+        
              
-             <h:commandButton class="btn" value="SAVE" action="#{update1.lug}"/> 
-<!--             <h:commandButton  value="CANCEL" class="cancel"/> <br/>-->
-            </div> 
-            
-            
-            
-            
-            
-            
+            <h:commandButton class="btn" value="SAVE" action="#{upd.lug()}"/> 
+            <h:commandButton class="can" value="Back" action="done"/>
+                             
+          
         </h:form>
     </h:body>
 </html>

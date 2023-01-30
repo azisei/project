@@ -246,6 +246,8 @@ public class insert {
             st.setString(5,type);
             st.setString(6,adult);
             st.executeUpdate();
+            
+            
         }
         catch (SQLException e){
             
@@ -255,18 +257,18 @@ public class insert {
      try{
             dbc b=new dbc();
             Connection connectio =b.connMethod();
-            PreparedStatement s=connectio.prepareStatement("Insert into TRAIN(TRAIN_NUMBER,STARTING_POINT,DESTINATION,DAY,DEPARTURE) VALUES (?,?,?,?,?)");
+            PreparedStatement s=connectio.prepareStatement("Insert into TRAIN1(TRAIN_NUMBER,STARTING_POINT,DESTINATION,DAY,DEPARTURE) VALUES (?,?,?,?,?)");
             s.setString(1,trainNo);
             s.setString(2,startingpoint);
             s.setString(3,destination);
             s.setString(4,date);
              s.setString(5,departure);
-             
+              
             s.executeUpdate();
      }
      catch (SQLException e){
             
         }
  }
-    
-}
+} 
+ 
