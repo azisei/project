@@ -28,10 +28,7 @@
                 right: 700px;
                 top: 100px;
             }
-            .table1{
-              right: 700px;
-                top: 200px;  
-            }
+            
             .bac{
                  position: fixed;
                 right: 300px;
@@ -90,43 +87,7 @@
             
         </h:dataTable>
             </div>
-            <div>
-                <h:dataTable id ="pDat" value="#{tra.singlel()}" var="tre" class="table1">
-            
-            <h:column>
-                <f:facet name="header">
-                    TRAIN_NUMBER
-                </f:facet>
-                <h:outputText value="#{tre.trainNo}"/>  
-
-            </h:column>
-             <h:column>
-                <f:facet name="header">
-                     STARTING_POINT
-                </f:facet>
-                 <h:outputText value="#{tre.startingpoint}"/>  
-            </h:column>
-             <h:column>
-                <f:facet name="header">
-                  DESTINATION
-                </f:facet>
-                 <h:outputText value="#{tre.destination}"/>  
-            </h:column>
-             <h:column>
-                <f:facet name="header">
-                    DAY
-                </f:facet>
-                 <h:outputText value="#{tre.date}"/>  
-            </h:column>
-             <h:column>
-                <f:facet name="header">
-                 DEPARTURE
-                </f:facet>
-                 <h:outputText value="#{tre.departure}"/>  
-            </h:column>
-       
-        </h:dataTable>
-            </div>
+     
             <h:commandButton value="Back" class="bac" action="done"/>
         </h:form>
     </h:body>

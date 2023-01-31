@@ -4,8 +4,8 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>information</title>
-        <style>
+        <title> </title>
+         <style>
               body{
                 background-color: #ccffff;
                 background-image: url("pic.jpg");
@@ -24,11 +24,11 @@
                 background-color: #cea500; 
             }
             
-              .table{
-                right: 700px;
-                top: 100px;
+             
+            .table1{
+              right: 700px;
+                top: 200px;  
             }
-            
             .bac{
                  position: fixed;
                 right: 300px;
@@ -39,55 +39,47 @@
             }
             
         </style>
+        
     </h:head>
     <h:body>
         <h:form>
               <div>
-                <h:dataTable id ="pData" value="#{ret.singlelist()}" var="dat" class="table">
+                <h:dataTable id ="pDat" value="#{tra.singlel()}" var="tre" class="table1">
             
             <h:column>
                 <f:facet name="header">
-                    USERNAME
+                    TRAIN_NUMBER
                 </f:facet>
-                <h:outputText value="#{dat.username}"/>  
+                <h:outputText value="#{tre.trainNo}"/>  
 
             </h:column>
              <h:column>
                 <f:facet name="header">
-                     PHONE
+                     STARTING_POINT
                 </f:facet>
-                <h:outputText value="#{dat.phone}"/>  
+                 <h:outputText value="#{tre.startingpoint}"/>  
             </h:column>
              <h:column>
                 <f:facet name="header">
-                  ADDRESS
+                  DESTINATION
                 </f:facet>
-               <h:outputText value="#{dat.address}"/>  
+                 <h:outputText value="#{tre.destination}"/>  
             </h:column>
              <h:column>
                 <f:facet name="header">
-                    CLASS
+                    DAY
                 </f:facet>
-               <h:outputText value="#{dat.classes}"/>  
+                 <h:outputText value="#{tre.date}"/>  
             </h:column>
              <h:column>
                 <f:facet name="header">
-                 TYPE
+                 DEPARTURE
                 </f:facet>
-                <h:outputText value="#{dat.type}"/>  
+                 <h:outputText value="#{tre.departure}"/>  
             </h:column>
-             <h:column>
-                <f:facet name="header">
-                  ADULT
-                </f:facet>
-                <h:outputText value="#{dat.adult}"/>  
-            </h:column>
-             
-            
-            
+       
         </h:dataTable>
             </div>
-     
             <h:commandButton value="Back" class="bac" action="done"/>
         </h:form>
     </h:body>

@@ -53,6 +53,9 @@ public class insert {
         trNo.add(" 15055");
         trNo.add(" 15066");
         trNo.add(" 15077");
+        
+    
+        
         stp.add("Addis Ababa");
         stp.add("DiraDawa");
         stp.add("Dessie");
@@ -69,6 +72,8 @@ public class insert {
         des.add("Mekelle ");
         des.add("Wolkite");
         des.add("Jimma");
+        
+        
         da.add("05/02/2023 ");
         da.add("06/02/2023 ");
         da.add("07/02/2023 ");
@@ -255,8 +260,14 @@ public class insert {
     }
  public void lag(){
      try{
+           if(startingpoint.equals(destination)){
+                 System.out.println("You have chosen the Same city");
+                 }
+            else{
             dbc b=new dbc();
             Connection connectio =b.connMethod();
+            
+          
             PreparedStatement s=connectio.prepareStatement("Insert into TRAIN1(TRAIN_NUMBER,STARTING_POINT,DESTINATION,DAY,DEPARTURE) VALUES (?,?,?,?,?)");
             s.setString(1,trainNo);
             s.setString(2,startingpoint);
@@ -264,7 +275,9 @@ public class insert {
             s.setString(4,date);
              s.setString(5,departure);
               
+                 
             s.executeUpdate();
+            }
      }
      catch (SQLException e){
             
