@@ -48,17 +48,6 @@
                 font-size:1.6rem; 
                 }
                  
-                .l4ad{
-                    position: fixed;
-                right: 800px;
-                top: 400px;
-                
-                color:white;
-                font-style:italic;
-                font-size:1.6rem; 
-                }
-                
-                
                 .l5t{
                     position: fixed;
                 right: 800px;
@@ -70,28 +59,6 @@
                 font-size:1.8rem;
                 }
                
-                .l8a{
-                      position: fixed;
-                right: 870px;
-                top: 350px;
-                font-weight: bold;
-                text-decoration: underline;
-                color:white;
-                font-style:italic;
-                font-size:1.8rem;
-                }
-                
-                .l9h{
-                      position: fixed;
-                right: 790px;
-                top: 350px;
-                font-weight: bold;
-                text-decoration: underline;
-                color:white;
-                font-style:italic;
-                font-size:1.8rem;
-                }
-                
                 .btnne{
                      position: fixed;
                 right:500px;
@@ -118,22 +85,18 @@
         <h:form>
            
             <label class="l1c">Class and Fee</label> 
-            <h:selectOneRadio value="#{insert.classes}" class="l2cl" required="true">
+            <h:selectOneRadio value="#{insert.classes}" class="l2cl" required="true" requiredMessage="Please Select Class">
                 <f:selectItems value="#{insert.cla}"/>
                   
            </h:selectOneRadio> 
            
            <label class="l5t"> Ticket Type</label> 
-           <h:selectOneRadio value="#{insert.type}" class="l3tt" required="true">
+           <h:selectOneRadio value="#{insert.type}" class="l3tt" required="true" requiredMessage="Please Select Ticket Type">
                <f:selectItems value="#{insert.typ}"/>
                  
             </h:selectOneRadio> 
             
-             <label class="l8a">Adult</label> 
-             <label class="l9h">Child</label>
-             <h:selectOneRadio value="#{insert.adult}" class="l4ad" required="true">
-                  <f:selectItems value="#{insert.adul}"/>
-           </h:selectOneRadio> 
+        
               
    
              <h:commandButton value="Next" class="btnne" action="submit1" actionListener="#{insert.log()}"/>

@@ -18,8 +18,7 @@ public class insert {
     List<String> cla;
     private String type;//radio button
     List<String> typ;
-    private String adult;//radio button
-    List<String> adul;
+   
     private String trainNo;//combobox
     List<String>trNo;
     private String startingpoint;//combobox
@@ -35,7 +34,7 @@ public class insert {
     public insert(){
         cla= new ArrayList<>();
         typ= new ArrayList<>();
-        adul= new ArrayList<>();
+       
         da=new ArrayList<>();
         stp=new ArrayList<>();
         trNo=new ArrayList<>();
@@ -46,10 +45,9 @@ public class insert {
         cla.add("Standard :$30");
         cla.add("Economy :$45");
         cla.add("VIP :$100");
-        typ.add("Single");
-        typ.add("Return");
-        adul.add("Yes");
-        adul.add("Yes");
+        typ.add("Regular");
+        typ.add("Irregular");
+        
         trNo.add(" 15055");
         trNo.add(" 15066");
         trNo.add(" 15077");
@@ -196,25 +194,7 @@ public class insert {
     public void setTyp(List<String> typ) {
         this.typ = typ;
     }
-
-    public String getAdult() {
-        return adult;
-    }
-
-    public void setAdult(String adult) {
-        this.adult = adult;
-    }
-    
-
-    public List<String> getAdul() {
-        return adul;
-    }
-
-    public void setAdul(List<String> adul) {
-        this.adul = adul;
-    }
-
-    
+ 
     public String getUsername() {
         return username;
     }
@@ -243,13 +223,13 @@ public class insert {
         try{
             dbc d=new dbc();
             Connection connection =d.connMethod();
-            PreparedStatement st=connection.prepareStatement("Insert into SIGN(USERNAME,PHONE,ADDRESS,CLASS,TYPE,ADULT) VALUES(?,?,?,?,?,?)");
+            PreparedStatement st=connection.prepareStatement("Insert into SIGN(USERNAME,PHONE,ADDRESS,CLASS,TYPE) VALUES(?,?,?,?,?)");
             st.setString(1,username);
             st.setString(2,phone);
             st.setString(3,address);
             st.setString(4,classes);
             st.setString(5,type);
-            st.setString(6,adult);
+         
             st.executeUpdate();
             
             
@@ -260,10 +240,7 @@ public class insert {
     }
  public void lag(){
      try{
-           if(startingpoint.equals(destination)){
-                 System.out.println("You have chosen the Same city");
-                 }
-            else{
+           
             dbc b=new dbc();
             Connection connectio =b.connMethod();
             
@@ -277,7 +254,7 @@ public class insert {
               
                  
             s.executeUpdate();
-            }
+            
      }
      catch (SQLException e){
             

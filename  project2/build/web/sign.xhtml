@@ -82,9 +82,9 @@
             <label class="l2">Phone Number</label> 
             <label class="l3">Email Address</label>   
               
-            <h:inputText class="txt" value="#{insert.username}" required="true"></h:inputText>
-            <h:inputText class="txt1" value="#{insert.phone}" required="true"></h:inputText>
-              <h:inputText class="txt2" value="#{insert.address}" required="true"></h:inputText>
+            <h:inputText class="txt" value="#{insert.username}" required="true" requiredMessage="Please Enter Username"></h:inputText>
+            <h:inputText class="txt1" value="#{insert.phone}" required="true" requiredMessage="Please Enter Phone Number"></h:inputText>
+            <h:inputText class="txt2" value="#{insert.address}" required="true" requiredMessage="Please Enter Email Address"></h:inputText>
          
               <h:commandButton value="Next" class="btnlo" action="next" actionListener="#{insert.log}"/>
             

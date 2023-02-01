@@ -43,8 +43,7 @@ private String username1;
              add.setAddress(rs.getString("ADDRESS"));
              add.setClasses(rs.getString("CLASS"));
              add.setType(rs.getString("TYPE"));
-             add.setAdult(rs.getString("ADULT"));
-             
+            
              singleList.add(add);
              }
         } catch (SQLException e) {
